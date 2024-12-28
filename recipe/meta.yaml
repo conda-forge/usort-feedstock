@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/usort-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/usort-{{ version }}.tar.gz
   sha256: 68def75f2b20b97390c552c503e071ee06c65ad502c5f94f3bd03f095cf4dfe6
 
 build:
@@ -14,16 +14,16 @@ build:
     - usort = usort.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-scm
     - setuptools >=38.3.0
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - attrs >=21.2.0
     - click >=7.0.0
     - libcst >=0.3.7
@@ -40,6 +40,7 @@ test:
     - usort --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/facebook/usort
