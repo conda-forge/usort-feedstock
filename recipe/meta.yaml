@@ -22,6 +22,8 @@ requirements:
     - setuptools-scm
     - setuptools >=38.3.0
     - pip
+    - hatchling
+    - hatch-vcs
   run:
     - python >={{ python_min }}
     - attrs >=21.2.0
