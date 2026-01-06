@@ -29,8 +29,8 @@ requirements:
     - libcst >=0.3.7
     - moreorless >=0.3.0
     - stdlibs >=2021.4.1
-    - toml >=0.10.0
-    - trailrunner >=1.0
+    - tomli # [py < 311]
+    - trailrunner >=1.0,<2.0
 
 test:
   imports:
