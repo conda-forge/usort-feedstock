@@ -1,5 +1,5 @@
 {% set name = "usort" %}
-{% set version = "1.1.2" %}
+{% set version = "1.1.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/usort-{{ version }}.tar.gz
-  sha256: 784f780d85d2a8063e0a24ce4f9bbb7b4cac07028d51394a01789aa7ca130399
+  sha256: 3928043b4644f35c80e417698b0e89cc7bb51a1b0a021f2ba55ceffb86326398
 
 build:
   entry_points:
